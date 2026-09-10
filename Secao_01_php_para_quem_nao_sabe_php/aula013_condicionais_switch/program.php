@@ -1,21 +1,25 @@
 <?php
 
-// O "switch" verifica o valor da variável:
+/* 
+    — switch:
 
-$saldacao = 'Olá';
-$name = 'Erick';
-$desconhecido = 'Quem é você?';
+        O switch no PHP é uma estrutura de controle condicional que substitui vários if/else quando você precisa comparar a mesma variável com vários valores diferentes
+*/
+
+$greeting = 'Olá'; // Saudação
+$name = 'Erick'; // Nome
+$unknown = 'Quem é você?'; // Desconhecido
 
 switch ($name) {
     case 'Alexandre':
-        echo "{$saldacao}, {$name}";
+        echo "{$greeting}, {$name}";
         break;
 
     case 'Erick':
-        echo $saldacao . ', ' . $name;
+        echo $unknown . ', ' . $name;
         break;
 
     default:
-        echo $desconhecido;
+        echo $unknown;
         break;
 }

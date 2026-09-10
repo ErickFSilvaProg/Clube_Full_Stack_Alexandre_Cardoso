@@ -27,6 +27,21 @@
     — Funções para Array:
 
         https://www.php.net/manual/pt_BR/ref.array.php
+    
+    
+    — var_dump(expressao):
+
+        Esta função mostra na saída uma informação estruturada sobre uma ou mais expressões, incluindo o tipo e o valor. Arrays e objetos são explorados recursivamente com valores identados para mostrar a estrutura.
+
+        Para que serve?
+        
+            • Verificar o tipo de dado: Mostra se a variável é um inteiro (int), string (string), booleano (bool), entre outros.
+        
+            • Mostrar o valor: Exibe o conteúdo atual guardado na variável.
+        
+            • Exibir estruturas complexas: Analisa arrays e objetos de forma recursiva, mostrando chaves, tamanhos e até propriedades públicas, privadas ou protegidas.
+        
+            • Depuração (Debugging): Ajuda a entender o fluxo de dados e a descobrir erros no código
 
 */
 

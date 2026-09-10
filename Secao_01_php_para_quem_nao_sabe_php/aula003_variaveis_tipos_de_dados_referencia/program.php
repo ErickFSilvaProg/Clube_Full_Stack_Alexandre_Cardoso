@@ -36,7 +36,7 @@ $idade = null;
 /* **************************************
 Passando valor por referência */
 
-$nome1 = "Cláudio";
+$nome1 = "José";
 $nome2 = &$nome1;
 echo "$nome2\n";
 
