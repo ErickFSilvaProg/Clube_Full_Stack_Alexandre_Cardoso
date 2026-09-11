@@ -17,11 +17,11 @@
             
         Adição e Remoção:
         
-            array_push: Adiciona item no fim.
-            array_pop: Remove item do fim.
+            array_push: Adiciona dados no fim.
+            array_pop: Remove dados do fim.
             
-            array_unshift: Adicionar item no início.
-            array_shift: Remove item do início.
+            array_unshift: Adicionar dados no início.
+            array_shift: Remove dados do início.
 
 
     — Funções para Array:
@@ -36,18 +36,15 @@
         Para que serve?
         
             • Verificar o tipo de dado: Mostra se a variável é um inteiro (int), string (string), booleano (bool), entre outros.
-        
             • Mostrar o valor: Exibe o conteúdo atual guardado na variável.
-        
             • Exibir estruturas complexas: Analisa arrays e objetos de forma recursiva, mostrando chaves, tamanhos e até propriedades públicas, privadas ou protegidas.
-        
             • Depuração (Debugging): Ajuda a entender o fluxo de dados e a descobrir erros no código
 
 */
 
 
 // Array:
-$data = ['Alexandre','Maria','João',34,true,false];
+$data = ['Alexandre','Maria','João',34, 33.3,false,true];
 
 
 // — Exemplo 1:
@@ -68,34 +65,29 @@ echo "\n";
 
 // — Exemplo 3: Adicionar elemento no final do array.
 // Opção quando se sabe a última posição do array.
-$data[6] = 'last';
-
+$data[7] = 'last';
 print_r($data);
 echo "\n";
 
 // Conta o número de elementos do array.
 $data[count($data)] = 'Marte';
-
 print_r($data);
 echo "\n";
 
 // Adicionar um elemento no array sempre após seu último elemento existente.
 array_push($data, 'Último elemento');
-
 print_r($data);
 echo "\n";
 
 
 // — Exemplo 4: Adicionar elemento no início do array.
 array_unshift($data, 'Início do array');
-
 print_r($data);
 echo "\n";
 
 
 // — Exemplo 5: Criando índices específicos.
 $person = ['name' => 'Alexandre', 'age' => '38'];
-
 print_r($person['name']);
 echo "\n";
 
@@ -106,12 +98,18 @@ $person2 = [
     'age' => '38', 
     'documents' => [
         'cpf' => '12345678901', 
-        'rg' => '421456734'
-        ]
-    ];
+        'rg' => '421456734',
+        'outro array' => array(
+            1,2,3,4
+        )
+    ]
+];
+
+print_r($person2);
+echo "\n";
 
 print_r($person2['documents']);
 echo "\n";
 
-print_r($person2['documents']['cpf']);
+print_r($person2['documents']['outro array']);
 echo "\n";
