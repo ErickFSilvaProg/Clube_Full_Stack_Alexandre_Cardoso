@@ -1,38 +1,20 @@
 <?php
 
+/*
+    — Constantes em PHP:
+
+        Uma constante é um identificador (nome) para um valor simples. Como o nome sugere, esse valor não pode mudar durante a execução do script (exceto para as constantes mágicas, que na verdade não são constantes). As constantes diferenciam maiúsculas de minúsculas. Por convenção, identificadores de constantes são sempre em maiúsculas.
+*/
+
 // CONSTANTES
-
-define('NAME','Alexandre');
-echo NAME;
-echo "\n";
-
-
-// Constantes pré-definidas:
-function teste() {
-    // Constantes mágicas, recupera o nome da função.
-    echo __FUNCTION__;
-    echo "\n";
-    echo __METHOD__;
-}
-
-teste();
-echo "\n";
-
-echo DIRECTORY_SEPARATOR; // Imprime uma barra "\".
-echo "\n";
+define('NOME','Erick');
 
 
 // Verifica se uma constante foi definida:
-if (defined('NAME')) {
+if (defined('NOME')) {
     echo "Constante definida.";
 }
 else {
     echo "Constante não definida.";
 }
-echo "\n";
-
-
-// Imprime todas as constantes do PHP:
-$cons = get_defined_constants(true);
-var_dump($cons);
 echo "\n";

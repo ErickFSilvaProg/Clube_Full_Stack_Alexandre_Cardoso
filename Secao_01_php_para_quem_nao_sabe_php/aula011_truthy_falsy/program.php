@@ -30,4 +30,19 @@ var_dump(!![]);
 echo "\n";
 
 // Exemplos Truthy:
-var_dump('PHP');
+var_dump(!!'PHP');
+
+echo "\n";
+
+
+/* ***********************
+Exemplo prático */
+
+if (!0) {
+    echo "Entrou no IF";
+}
+else {
+    echo "Entrou no ELSE";
+}
+
+echo "\n\n";

@@ -1,58 +1,75 @@
 <?php
 
-/* **************************************
-Variáveis: */
+/*
+    — Variáveis, tipo de dados e referência.
+        https://www.php.net/manual/pt_BR/language.variables.basics.php
 
-// String:
-$titulo = "Variáveis";
+        As variáveis no PHP são representadas por um cifrão ($) seguido pelo nome da variável.
+        Os nomes de variável são sensíveis a maiúsculas e minúsculas.
+
+        •● Como declarar:
+            • Comece sempre com o cifrão ($).
+            • Use uma letra ou sublinhado (_) após o cifrão.
+            • O PHP diferencia maiúsculas de minúsculas ($nome é diferente de $Nome)
+
+    A função gettype() retorna o tipo da variável.
+*/
+
+// string:
+echo gettype('Texto') . '(Texto)';
+echo "\n";
 
 
-// Number:
-$anoAtual = date('Y');
+// numbers - integer e double (float):
+echo gettype(12) . '(12)';
+echo "\n";
+echo gettype(12.34) . '(12.34)';
+echo "\n";
 
 
-// Boolean:
-$confirmar = true;
-$negar = false;
+// boolean:
+echo gettype(false) . '(false)';
+echo "\n";
+echo gettype(true) . '(true)';
+echo "\n";
 
 
-// Array:
-$listaNomes = ['Pedro','João','Carlos'];
+// arrays:
+echo gettype([]) . '([])';
+echo "\n";
 
-foreach ($listaNomes as $nome) {
-    $nome;
+
+// object:
+class Person {
+    // Objeto...
 }
 
-
-// Objetos:
-class Pessoa {}
-$pessoa = gettype(new Pessoa);
+echo gettype(new Person) . '(Person)';
+echo "\n";
 
 
-// Null: Auxencia de valor:
-$idade = null;
+// null:
+echo gettype(null) . '(null)';
+echo "\n";
 
 
-/* **************************************
-Passando valor por referência */
+/* ********************************************* 
+Variáveis */
 
-$nome1 = "José";
-$nome2 = &$nome1;
-echo "$nome2\n";
-
-$nome1 = "Francisco";
-echo "$nome1\n";
-echo "$nome2\n";
+$nomeCompleto = 'Erick Ferreira';
+$idade = 39;
+$salario = 6534.79;
 
 
-/* **************************************
-Programa */
+// Passando valor por referência (&$variavel):
+$nome = &$nomeCompleto;
+echo $nome;
+echo "\n";
 
-$resultado;
+$nomeCompleto = 'Lucas Vasconcelos';
 
-if ($anoAtual == 2026) {
-    $resultado = $confirmar;
-}
-else {
-    $resultado = $negar;
-}
+echo $nomeCompleto;
+echo "\n";
+
+echo $nome;
+echo "\n";
